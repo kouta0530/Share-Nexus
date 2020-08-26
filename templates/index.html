@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="ja">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+          integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Sawarabi+Mincho&display=swap" rel="stylesheet">
+    <title>Hello, world!</title>
+</head>
+<body>
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous"></script>
+
+<script type="text/javascript" async
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=MML_SVG"></script>
+
+
+<div class="container" id="top">
+    <div class="-main grid--cell pb-3 my-3 border-bottom" style="border-color:gray">
+        <h1 style="font-family: Sawarabi Mincho, sans-serif;" class="text-lg-center">数学フォーラム</h1>
+        <div class="input-group">
+            <input type="text" class="form-control" placeholder="" aria-label="" aria-describedby="basic-addon1"
+                   id="searchText">
+            <div class="input-group-append">
+                <button class="btn btn-success" type="button" id="search">検索</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="container col-3 border-right" id="menu" style="border-color: gray">
+        <div class="list-group">
+            <a href="#!" class="list-group-item list-group-item-action">トップへ</a>
+            <a href="#!" class="list-group-item list-group-item-action">サブ1</a>
+            <a href="#!" class="list-group-item list-group-item-action">サブ２</a>
+        </div>
+    </div>
+    <div class="container" id="center">
+        <div class="d-flex align-items-sm-center">
+            <h3 style="display: inline-block;">質問する</h3>
+            <a href="#!" class="btn btn-primary active btn-sm" role="button" aria-pressed="true">質問</a>
+        </div>
+
+        <div id="questions">
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="card-title">判別式</h4>
+                    <h6 class="card-subtitle mb-2 text-muted">判別式Dについて</h6>
+                    <p class="card-text">
+                        <math>
+                            <msup>
+                                <mi>x</mi>
+                                <mn>2</mn>
+                            </msup>
+                            <mo>+</mo>
+                            <mn>3</mn>
+                            <mi>x</mi>
+                            <mo>=</mo>
+                            <mn>0</mn>
+                        </math>
+                        の判別式についてhghg
+                    </p>
+                    <a href="#!" class="card-link">Card link</a>
+                    <a href="#!" class="card-link">Another link</a>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="card-title">Card title2</h4>
+                    <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+                    <p class="card-text">
+                        Some quick example text to build on the card title
+                        and make up the bulk of the card's content.
+                    </p>
+                    <a href="#!" class="card-link">Card link</a>
+                    <a href="#!" class="card-link">Another link</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="card-title">Card title3</h4>
+                    <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+                    <p class="card-text">
+                        Some quick example text to build on the card title
+                        and make up the bulk of the card's content.
+                    </p>
+                    <a href="#!" class="card-link">Card link</a>
+                    <a href="#!" class="card-link">Another link</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<script>
+    $(function () {
+        $("#search").click(function () {
+            var param = $("#searchText").val();
+            if (param != "") {
+                //文字が入ってる時だけ
+                param = escape(param);
+                window.location.href = "./index.html?q=" + param
+            } else {
+                //リンク無効
+                return false;
+            }
+        });
+    });
+</script>
+
+
+</body>
+</html>
