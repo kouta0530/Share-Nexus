@@ -1,7 +1,17 @@
 <html>
     <head></head>
     <body>
-        <a href= "/question/{{id}}">test</a>
-        <a href = "/page={{id + 1}}">{{id + 1}}</a>
+        {% for i in data %}
+        <h2><a href="/question/{{i.id}}">{{i.title}}</a></h2>
+        <hr>
+        <p>{{i.date}}</p>
+        <br>
+        {% endfor %}
+
+        <div>
+            {% for j in range(count) %}
+            <a href= "/page={{j + 1}}">{{j + 1}}</a>
+            {% endfor %}
+        </div>
     </body>
 </html>
