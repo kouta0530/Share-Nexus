@@ -13,8 +13,9 @@ def index(id = 1):
 @app.route("/upload",methods = ["POST"])
 def upload():
     text = request.form["text"]
-    sessionId = session["sessionId"]
-
+    title = request.form["title"]
+    userID = session["sessionID"]
+    models.uploadQuestion(title,text,userID)
 
     return render_template("index.html")
 
@@ -24,12 +25,14 @@ def show(id):
     data = models.getData(sql)
     return render_template("question.html",data = data[0])
 
-@app.route("/answer")
+@app.route("/answer",methods=["POST"])
 def answer():
     question_id = request.form["id"]
     text = request.form["text"]
-
+    userID = request.form["sessionID"]
     redirect_url = "/question/".join(str(question_id))
+
+    models.uploadAnswer(question_id,text,userID)
 
     return redirect(redirect_url)
     

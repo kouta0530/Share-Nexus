@@ -1,5 +1,7 @@
 from test import PosDB
 from test import setting
+import datetime
+
 #ローカル用のurl
 url = setting.setting_url
 
@@ -16,7 +18,6 @@ def insertData(command):
     db.set_cursor()
     db.insert_command(command)
 
-
     db.close()
     return 0
 
@@ -29,7 +30,15 @@ def listQuestions(id,limit):
     return data,count[0]["count"]
 
 
+def uploadQuestion(text,title,userID):
+    date = ""
+    sql = 'INSERT INTO questions (title,date,text,userID) VALUES(%s,%s,%s,%s)' %(title,date,text,userID)
+    insertData(sql)
 
+def uploadAnswer(question_id,text,userID):
+    date = ""
+    sql = 'INSERT INTO answer(title,date,text,userID) VALUES(%s,%s,%s,%s)' %(question_id,date,text,userID)
+    insertData(sql)
 
 
 
