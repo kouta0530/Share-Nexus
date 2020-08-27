@@ -1,0 +1,45 @@
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" href="./static/css/style.css">
+        <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+        
+        <title>Study with Friend</title>
+    </head>
+    <body>
+        <header>
+            <h1><a href = "./">Study with Friend</a></h1>
+            <ul>
+                <li><a href = "./index">質問リスト</a></li>
+                <li><a href = "./index">マイページ</a></li>
+                <li><a href = "./index">ログイン</a></li>
+            </ul>
+            <hr>
+        </header>
+        <main>
+            <div class="topscreen">
+                <div class="title">
+                    <h1>Study with Friend</h1>
+                    <p>勉強の苦手...でも追いつきたいそんな人のための勉強支援アプリ</p>              
+                </div>
+                
+                <div class="PostProblemStatement">
+                    <p>問題文を投稿してください</p>
+                    <form action = "/post"  method= "POST" class="PostProblemForm">
+                        <textarea name="problem" rows = 5></textarea>
+                        {% if error !=None %}
+                            <span class="error">{{error}}</span>
+                        {% endif %}
+                        <br>
+                        <button type = "submit">ヒントを表示する</button>
+                    </form>
+                </div>
+            </div>
+
+
+
+        </main>
+        <footer>&copy:Share Nexus</footer>
+    </body>
+</html>

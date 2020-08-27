@@ -1,9 +1,11 @@
 from test import PosDB
 from test import setting
 import datetime
+import os
 
 #ローカル用のurl
-url = setting.setting_url
+#url = setting.setting_url
+url = os.environ["DATABASE_URL"]
 
 def getData(command):
     db = PosDB.PosDB(url)
@@ -30,14 +32,12 @@ def listQuestions(id,limit):
     return data,count[0]["count"]
 
 
-def uploadQuestion(text,title,userID):
-    date = ""
-    sql = 'INSERT INTO questions (title,date,text,userID) VALUES(%s,%s,%s,%s)' %(title,date,text,userID)
+def uploadQuestion(title,text):
+    sql = "INSERT INTO questions (title,text) VALUES('%s','%s')" %(title,text)
     insertData(sql)
 
 def uploadAnswer(question_id,text,userID):
-    date = ""
-    sql = 'INSERT INTO answer(title,date,text,userID) VALUES(%s,%s,%s,%s)' %(question_id,date,text,userID)
+    sql = 'INSERT INTO answer(title,date,text,userID) VALUES(%s,%s,%s)' %(question_id,text,userID)
     insertData(sql)
 
 

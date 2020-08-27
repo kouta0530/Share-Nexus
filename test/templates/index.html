@@ -1,0 +1,35 @@
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" href="/static/css/style.css">
+        <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+        
+        <title>Study with Friend</title>
+    </head>
+    <body>
+        <header>
+            <h1>Study with Friend</h1>
+            <hr>
+        </header>
+        <main>
+            <div class = "questionList">
+                {% for i in data %}
+                <div class="question_card">
+                    <h2>{{i.title}}</h2>
+                    <hr>
+                    <button><a href ="/question/{{i.id}}">回答する</a></button>
+                    <br>
+                </div>
+                {% endfor %}
+                <div class="pages">
+                    {% for j in range(count) %}
+                    <a href= "/index/page={{j + 1}}">{{j + 1}}</a>
+                    {% endfor %}
+                </div>
+            </div>
+
+        </main>
+        <footer>&copy:Share Nexus</footer>
+    </body>
+</html>

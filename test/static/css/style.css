@@ -1,0 +1,197 @@
+body header h1{
+    display: inline;
+}
+body header ul{
+    list-style-type: none;
+    font-size: 20px;
+    display: inline;
+    margin-left: 50%;;
+}
+
+body header ul li{
+    display: inline;
+    margin-right:10px;
+}
+
+body header a{
+    color:black;
+    text-decoration: none;
+}
+
+body header a:hover{
+    color:orange;
+}
+
+
+body main{
+    height: 1000px;
+}
+
+
+
+
+/*トップページのCSS*/
+.topscreen{
+    background-image: url(../img/top.jpg);
+    height: 600px;
+    display:flex;
+    justify-content:justify;
+
+}
+
+.topscreen .title{
+    width: 800px;
+    margin:auto 30px;
+    color:white;
+}
+
+.topscreen .title h1{
+    font-size: 50px;
+}
+
+.topscreen .title p{
+    margin-left: 10px;
+    border-bottom: solid 2px white;
+    width:400px;
+}
+
+.topscreen .PostProblemStatement {
+    background-color: rgba(128, 128, 128, 0.521);
+    width:400px;
+    height:500px;
+    padding:0 15px 10px 15px;
+    margin-top: 20px;
+    color:white;
+    border-radius: 5px;
+}
+.topscreen .PostProblemStatement p{
+    font-size: 24px;
+}
+
+.PostProblemForm textarea {
+    border-radius: 3px;
+    font-size:18px;
+    width: 100%;
+    height: 300px;
+    border:none;
+}
+
+.topscreen .PostProblemStatement span{
+    color:red;
+    font-size:18px;
+}
+
+.PostProblemForm button{
+    margin:20px 0 0 60%;
+    color:white;
+    background-color: rgba(233, 85, 17, 0.767);
+    padding:15px;
+    border-radius: 7px;
+    border: solid 2px white;
+}
+
+.PostProblemForm button:hover{
+    opacity: 0.7;
+}
+
+/*ここまで*/
+
+/*ここから解説ページのCSS*/
+
+
+
+.explanations .explanation{
+    width: 500px;
+    margin: 0 auto;
+}
+
+.explanations .explanation h2{
+    border-bottom:solid 1px gray;
+}
+
+.explanations .references{
+    width:500px;
+    margin:0 auto;
+}
+
+.explanations .references h3{
+    border-bottom:solid 1px gray;
+}
+
+.explanations form{
+    width: 300px;
+    margin:20px auto;
+}
+
+.explanations form button{
+    color:white;
+    border:solid 2px white;
+    border-radius: 7px;
+    margin:10px;
+    padding:10px
+}
+
+.explanations form .yes{
+    background-color: rgb(236, 63, 10);
+}
+
+.explanations form .no{
+    background-color: rgb(55, 41, 187);
+}
+
+
+/*ここまで*/
+
+/*ここから質問一覧のCSS*/
+.questionList{
+    width:800px;
+    height: 800px;
+    margin:0 auto;
+}
+
+.questionList h2{
+    margin-left:20px;
+}
+
+
+.questionList button{
+    color:white;
+    background-color: red;
+    border-radius:2px;
+    width:150px;
+    margin:0 70%;
+    padding:5px;
+}
+
+.questionList .question_card{
+    margin:10px 0;
+    width:800px;
+    height:160px;
+    border:solid 1px black;
+    border-radius: 5px;
+}
+
+.questionList .pages {
+    margin:0 auto;
+    width:500px
+}
+
+
+.questionList .pages a {
+    font-size: 28px;
+    margin-left:10px;
+    border-bottom:none;
+    color:black;
+}
+
+.questionList .pages a:hover{
+    color:orange;
+}
+/*ここまで*/
+
+body footer{
+    background-color: black;
+    color:white;
+    padding-bottom:5px;
+    text-align: center;
+}
