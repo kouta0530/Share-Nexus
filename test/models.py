@@ -1,5 +1,5 @@
 from test import PosDB
-from test import setting
+#from test import setting
 import datetime
 import os
 
