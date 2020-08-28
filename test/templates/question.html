@@ -2,18 +2,37 @@
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <link rel="stylesheet" href="./static/css/style.css">
-        <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
-        
+        <link rel="stylesheet" href="/static/css/style.css">
         <title>Study with Friend</title>
     </head>
     <body>
         <main>
-            <div class="question">
-                <h2>{{data.title}}</h2>
-                <p>{{data.text}} {{data.date}}</p>
-            </div>
-            <div class="answer">
+            <div class="thread">
+                <div class="question">
+                    <h2>{{data.title}}</h2>
+                    <label>{{data.date}}</label>
+                    <hr>
+                    
+                    <p><img src="/static/img/account.png">{{data.text}}</p>
+                </div>
+                <div class="answers">
+                    {% for answer in answers %}
+                    <div class="answer">
+                        <h2>{{answer.title}}</h2>
+                        <label>{{answer.date}}</label>
+                        <hr>
+                        <p><img src="/static/img/answer_account.png">{{answer.text}}</p>
+                    </div>
+                    {% endfor %}
+                </div>
+                <form action = "/answer" method="POST" class="answer_post">
+                    <h2>回答</h2>
+                    <br>
+                    <input type = "hidden" name = "id" value = {{data.id}}>
+                    <input type="text" name = "title">
+                    <textarea name = "text"></textarea>
+                    <button type="submit">回答を投稿</button>
+                </form>
             </div>
         </main>
         <footer>&copy:Share Nexus</footer>
