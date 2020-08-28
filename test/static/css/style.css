@@ -90,7 +90,7 @@ body main{
     border: solid 2px white;
 }
 
-.PostProblemForm button:hover{
+button:hover{
     opacity: 0.7;
 }
 
@@ -112,7 +112,7 @@ body main{
 
  .question_card{
     margin:10px 0;
-    width:700px;
+    width:750px;
     min-height:140px;
     border:solid 1px black;
     border-radius: 5px;
@@ -121,6 +121,11 @@ body main{
 .question_card h2{
     width:70%;
     display:inline;
+}
+
+.question_card button{
+    border:solid 2px gray;
+    text-decoration: none;
 }
 
 .question_card button a{
@@ -137,11 +142,16 @@ body main{
 
 /*ここから解説ページのCSS*/
 
-
+.explanations{
+    display: flex;
+    justify-content: justify;
+}
 
 .explanations .explanation{
     width: 500px;
-    margin: 0 auto;
+    margin: 0 30px;
+    border:solid 3px lightblue;
+    padding:10px;
 }
 
 .explanations .explanation h2{
@@ -150,31 +160,31 @@ body main{
 
 .explanations .references{
     width:500px;
-    margin:0 auto;
+    margin:0 30px;
 }
 
 .explanations .references h3{
     border-bottom:solid 1px gray;
 }
 
-.explanations form{
+.explanationsform{
     width: 300px;
     margin:20px auto;
 }
 
-.explanations form button{
+.explanationsform button{
     color:white;
-    border:solid 2px white;
+    border:solid 2px gray;
     border-radius: 7px;
     margin:10px;
     padding:10px
 }
 
-.explanations form .yes{
+.explanationsform .yes{
     background-color: rgb(236, 63, 10);
 }
 
-.explanations form .no{
+.explanationsform .no{
     background-color: rgb(55, 41, 187);
 }
 
