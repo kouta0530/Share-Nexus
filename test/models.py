@@ -33,7 +33,8 @@ def listQuestions(id,limit):
 
 
 def uploadQuestion(title,text):
-    sql = "INSERT INTO questions (title,text) VALUES('%s','%s')" %(title,text)
+    date = "2020-8-26"
+    sql = "INSERT INTO questions (title,date,text) VALUES('%s','%s','%s')" %(title,date,text)
     insertData(sql)
 
 def uploadAnswer(title,text,question_id):
