@@ -1,7 +1,7 @@
 from test import PosDB
 import datetime
 import os
-from test import setting
+#from test import setting
 
 #ローカル用のurl
 #url = setting.setting_url
