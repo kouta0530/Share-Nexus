@@ -1,12 +1,12 @@
 from test import PosDB
-#from test import setting
+from test import setting
 import datetime
 import os
 
 
 #ローカル用のurl
-#url = setting.setting_url
-url = os.environ["DATABASE_URL"]
+url = setting.setting_url
+#url = os.environ["DATABASE_URL"]
 
 def getData(command):
     db = PosDB.PosDB(url)
