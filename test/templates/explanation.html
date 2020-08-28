@@ -30,7 +30,7 @@
                     <a href = "{{url}}">{{url}}</a>
                     {% endfor %}
                     <form action="/upload" method="POST" class="explanationsform">
-                        <input type="hidden" name = "title" value="{{explanation.text[0:30]}}"> 
+                        <input type="hidden" name = "title" value="{{explanation.problem[0:30]}}"> 
                         <input type="hidden" name = "text" value="{{explanation.text}}">  
                         <button class="yes">分かった</button>
                         <button type="submit" class="no">分からなかった</button>

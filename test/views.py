@@ -28,6 +28,7 @@ def post_problem():
 
     session.pop("error",None)
     explanation = {
+        "problem":problem,
         "text":["台形の公式","二次方程式",  "1.各点の座標や直線に注目する","2.どこを上底下底にするか考える"],
         "urls":["https://math.005net.com/yoten/2jihoBunsyo.php","https://math.005net.com/yoten/2jihoBunsyo.php?reidai=rei4"],
     }
