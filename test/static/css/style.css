@@ -24,7 +24,7 @@ body header a:hover{
 
 
 body main{
-    height: 1000px;
+    min-height: 1000px;
 }
 
 
@@ -94,6 +94,45 @@ body main{
     opacity: 0.7;
 }
 
+.recent_questions{
+    width:1000px;
+    margin-top:20px;
+    margin-left:20px;
+}
+
+.question_card button{
+    color:white;
+    background-color: red;
+    border: solid 2px white;
+    border-radius:7px;
+    width:150px;
+    margin:0 50%;
+    padding:10px;
+}
+
+ .question_card{
+    margin:10px 0;
+    width:700px;
+    min-height:140px;
+    border:solid 1px black;
+    border-radius: 5px;
+}
+
+.question_card h2{
+    width:70%;
+    display:inline;
+}
+
+.question_card button a{
+    color:white;
+    text-decoration: none;
+}
+
+.recent_questions .question_card{
+    margin-top:20px;
+}
+
+
 /*ここまで*/
 
 /*ここから解説ページのCSS*/
@@ -145,8 +184,8 @@ body main{
 /*ここから質問一覧のCSS*/
 .questionList{
     width:800px;
-    height: 800px;
-    margin:0 auto;
+    min-height: 800px;
+    margin:0 30px;
 }
 
 .questionList h2{
@@ -154,26 +193,10 @@ body main{
 }
 
 
-.questionList button{
-    color:white;
-    background-color: red;
-    border-radius:2px;
-    width:150px;
-    margin:0 70%;
-    padding:5px;
-}
-
-.questionList .question_card{
-    margin:10px 0;
-    width:800px;
-    height:160px;
-    border:solid 1px black;
-    border-radius: 5px;
-}
 
 .questionList .pages {
-    margin:0 auto;
-    width:500px
+    margin:50px auto;
+    width:300px
 }
 
 
@@ -188,6 +211,62 @@ body main{
     color:orange;
 }
 /*ここまで*/
+
+/*質問詳細*/
+.thread h2{
+    width:50%;
+    display: inline;
+}
+
+
+.question{
+    width: 800px;
+    margin:0 30px;
+    border:solid 0 1px rosybrown;
+    border-radius: 5px;
+}
+
+.answers{
+    width:800px;
+    margin: 0 30px;
+}
+
+.answers .answer{
+    width:800px;
+    margin:20px auto;
+    border-bottom:solid 1px rosybrown;
+    border-radius: 5px;
+}
+
+.answer_post{
+    margin:30px 30px;
+    width:800px;
+
+}
+
+.answer_post input{
+    border:none;
+    border-bottom:solid 1px gray;
+    font-size:20px;
+}
+
+.answer_post textarea{
+    width:100%;
+    height: 300px;
+    margin:10px 0;
+    font-size:24px;
+}
+
+.answer_post button{
+    background-color:rgb(168, 39, 39);
+    color:white;
+    border-radius: 5px;
+    border:solid 2px gray;
+    padding:10px;
+    width:200px;
+    margin:0 70%;
+}
+
 
 body footer{
     background-color: black;

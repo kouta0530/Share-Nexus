@@ -1,7 +1,7 @@
 from test import PosDB
-from test import setting
 import datetime
 import os
+from test import setting
 
 #ローカル用のurl
 #url = setting.setting_url
@@ -25,7 +25,7 @@ def insertData(command):
 
 
 def listQuestions(id,limit):
-    sql = "SELECT * FROM questions ORDER BY ID DESC limit "+ str(limit) + "OFFSET " + str((id-1) * 3)
+    sql = "SELECT * FROM questions ORDER BY ID DESC limit "+ str(limit) + "OFFSET " + str((id-1) * 5)
     data = getData(sql)
     count = getData("SELECT count(*) from questions")
 
@@ -36,8 +36,9 @@ def uploadQuestion(title,text):
     sql = "INSERT INTO questions (title,text) VALUES('%s','%s')" %(title,text)
     insertData(sql)
 
-def uploadAnswer(question_id,text,userID):
-    sql = 'INSERT INTO answer(title,date,text,userID) VALUES(%s,%s,%s)' %(question_id,text,userID)
+def uploadAnswer(title,text,question_id):
+    date = "2020-8-28"
+    sql = "INSERT INTO answer(date,text,question_id,title) VALUES('%s','%s',%s,'%s')" %(date,text,question_id,title)
     insertData(sql)
 
 
